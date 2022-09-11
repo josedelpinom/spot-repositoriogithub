@@ -128,6 +128,10 @@ h1{
     font-family: 'Roboto', sans-serif;
     padding-bottom: 40px;
     padding-top: 35px;
+    transition: color .5s;
+  }
+h1:hover{
+    color: blue;
 }
 p{
     font-family: 'Roboto', sans-serif;
