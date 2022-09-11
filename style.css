@@ -67,6 +67,7 @@
     margin-top: 20px;
     
 }
+
 .item {
     text-decoration: none;
     color: #F2ECCE;
@@ -90,7 +91,29 @@
 .iconoshopclaro{
     display: none;
 }
-
+.navegacionitems li a{
+    animation-duration: 1s;
+    animation-name: fondo;
+    animation-iteration-count:unset;
+    
+}
+@keyframes fondo{
+    10%{
+    justify-content:flex-start;
+    padding-left: 2px;
+}
+    50%{
+      padding-left: 3;
+        justify-content: flex-start;
+        padding-left: 4px;
+    }
+        
+    90%{
+            width: 35%;
+            justify-content: flex-start;
+            padding-left: 2px;
+        }
+}
 
 /*             index             */
 
@@ -177,10 +200,16 @@ p{
 .link{
     background-color:#401F0D;
     border-radius: 50px;
+    background-size:cover;
+    transition: all 0.5s;
     margin-top: 5px;
     width: 170px;
     height: 50px;
 }
+.link:hover{
+    transform: translate(2px, 2px);
+}
+
 
 .contactos p{
     margin-top: 10px;
