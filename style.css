@@ -1,0 +1,330 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*             general           */
+.conteinerpadreindex{
+    display: grid;
+    grid-template-columns: 20% 80%; 
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "nav cont "
+    ;
+    
+}
+.navegacion{
+    grid-area: nav;
+    background-color: #401F0D;
+}
+.contenido{
+    grid-area: cont;
+    overflow: auto;
+}
+
+.contenidoindex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:left;
+    overflow: auto;
+}
+.contenidos{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin: 55px;
+    padding: 5px;
+    overflow: auto;
+}
+
+.iconoshop {
+    display: flex;
+    position: fixed;
+    width: 95%;
+    height:100px;
+    margin: 20px;
+    flex-direction:row;
+    align-items: center;
+    justify-content: right;
+    
+}
+
+
+    /*             barra de navegacion             */
+
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    overflow: hidden;
+    align-items: flex-start;
+    width: 20%;
+    height: 100%;
+
+}
+.boxnavegacion{
+    width: 100%;
+    margin-top: 20px;
+    
+}
+.item {
+    text-decoration: none;
+    color: #F2ECCE;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    margin: 15px;
+    padding-top: 10px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    margin-top: 30%;
+    width: 100%;
+    height: 100%;
+    
+}
+.logocelular{
+    display:none;
+}
+.iconoshopclaro{
+    display: none;
+}
+
+
+/*             index             */
+
+.imagenesindex  {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+}
+  
+h1{
+    color: #401F0D;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 40px;
+    padding-top: 35px;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    color:black;
+}
+
+#arriba{
+    display: inline-table;
+    background-color: #401F0D;
+    
+}
+
+/*             questions             */
+
+
+.preguntas li a{
+   list-style-type:disc;
+   text-decoration: none;
+    color: #401F0D;
+    font-family: 'Roboto', sans-serif;
+    font-weight:500;
+   
+}
+.boxpreguntas{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20px;
+}
+.respuestas li{
+    text-decoration: none;
+    color: #401F0D;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin-bottom: 10x;
+    margin-top: 10px;
+}
+.boxrespuestas{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20px;
+}
+
+/*             contacto             */
+.boxcontacto{
+    display: flex;
+    flex-direction: column;
+    
+}
+.contactos li{ 
+    text-decoration: none;
+    color: #401F0D;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+.contactos a{
+    text-decoration: none;
+    color:#F2ECCE;
+    font-family: 'Roboto',sans-serif;
+    font-weight:400;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-size:small;
+    padding-left:10px;
+    
+}
+
+.link{
+    background-color:#401F0D;
+    border-radius: 50px;
+    margin-top: 5px;
+    width: 170px;
+    height: 50px;
+}
+
+.contactos p{
+    margin-top: 10px;
+}
+
+.contactos div{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 10px;
+}
+.boxcontacto p{
+    margin-top: 20px;
+}
+
+
+
+
+/*             carrito             */
+
+/*             shop             */
+.boxproductos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.productos div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px;
+
+}
+.productos{
+    display: grid;
+    grid-template-columns: repeat(1fr 2);
+    grid-template-rows: repeat(1fr 2);
+    gap: 10px;
+    grid-template-areas: 
+    "ft1 ft2"
+    "ft3 ft4"
+    ;
+
+}
+.producto1{
+    grid-area: ft1;
+}
+.producto2{
+    grid-area: ft2;
+}
+.producto3{
+    grid-area: ft3;
+}
+.producto4{
+    grid-area: ft4;
+}
+.productos div p{
+    margin-top: 7px;
+}
+
+
+
+
+
+/*      si es pantalla chiquita        */
+@media only screen and (max-width: 576px){
+    .conteinerpadreindex{
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: 200px ;
+        grid-template-areas: 
+        "nav"
+        "cont"
+        ;
+    }
+    .navegacion{
+        width: 100%;
+        height: 200px;
+        flex-direction: column;
+        align-items: center;
+        padding: 0%;
+        margin: 0%;
+
+    }
+    .boxnavegacion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35px;
+    }
+    .navegacionitems{
+        display:flex;
+        list-style-type: none;
+        text-decoration: none;
+        margin-top: 5px;
+    }
+    .logo{
+        display: none;
+    }
+    .logocelular{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    h1{
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
+    .imagenesindex{
+        width: 576px;
+    }
+    
+    .iconoshop{
+         display: none;
+    }
+    .iconoshopclaro{ /*icono para mobile ver*/
+        display: none;
+    }
+    
+    .boxpreguntas{
+        flex-direction: column;
+    }
+    .respuestas li iframe{
+        width: 576px;
+    }
+
+
+
+/*             shop             */
+
+
+.productos{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr 4);
+    gap: 10px;
+    grid-template-areas: 
+    "ft1"
+    "ft2"
+    "ft3"
+    "ft4"
+    ;
+}
+}
